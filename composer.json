@@ -1,0 +1,14 @@
+{
+  "name": "yatshub/pay",
+  "description": "Payments products",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Oleksandr Yatsenko",
+      "email": "yats.com.ua@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"pay\\": "src/"}
+  }
+}
