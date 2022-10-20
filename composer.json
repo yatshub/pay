@@ -1,6 +1,6 @@
 {
   "name": "yatshub/pay",
-  "description": "Payments products",
+  "description": "Payment functionality",
   "minimum-stability": "dev",
   "authors": [
     {
@@ -8,7 +8,19 @@
       "email": "yats.com.ua@gmail.com"
     }
   ],
-  "autoload": {
-    "psr-4": {"pay\\": "src/"}
+  "require": {
+    "yiisoft/yii2": "~2.0.0",
+    "squizlabs/php_codesniffer": "3.*"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true
+    }
   }
 }

@@ -1,6 +1,14 @@
 Payment functionality
 ----------
-
+## Install
 ```bash
-php index.php
+  composer install
+```
+## Migrate
+```bash
+  vendor/bin/yii migrate/up --appconfig=config.php
+```
+## Run server
+```bash
+  vendor/bin/yii serve --docroot=./web
 ```
