@@ -27,6 +27,8 @@ class m221019_091803_create_payment_method_table extends Migration
             'commission' => $this->float()->notNull(),
             'available_in_countries' => $this->string(255)->null(),
             'available_except_countries' => $this->string(255)->null(),
+            'os' => $this->string(50)->null(),
+            'min_amount' => $this->float()->notNull()->defaultValue(0),
         ]);
 
         $this->createIndex(

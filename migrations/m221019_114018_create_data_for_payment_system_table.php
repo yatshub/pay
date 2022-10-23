@@ -29,6 +29,10 @@ class m221019_114018_create_data_for_payment_system_table extends Migration
             [
                 'CardPay',
                 'Платежная система'
+            ],
+            [
+                'WalletRefill',
+                'Платежная система'
             ]
         ]);
     }
