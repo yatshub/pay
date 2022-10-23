@@ -12,3 +12,5 @@ Payment functionality
 ```bash
   vendor/bin/yii serve --docroot=./web
 ```
+
+<img src="https://yats.com.ua/pay.gif">

@@ -15,6 +15,8 @@ use yii\db\ActiveRecord;
  * @property float $commission
  * @property string $available_in_countries
  * @property string $available_except_countries
+ * @property string $os
+ * @property float $min_amount
  */
 class PaymentMethod extends ActiveRecord
 {
@@ -37,6 +39,7 @@ class PaymentMethod extends ActiveRecord
             [['name', 'payment_id'], 'required'],
             [['position'], 'integer', 'min' => 1, 'max' => 999999999],
             [['name'], 'string', 'max' => 100],
+            [['os'], 'string', 'max' => 50],
             [['description', 'available_in_countries', 'available_except_countries'], 'string', 'max' => 255],
             [['payment_id'], 'exist',
                 'skipOnError' => true,
@@ -60,5 +63,21 @@ class PaymentMethod extends ActiveRecord
     public static function find(): PaymentMethodQuery
     {
         return new PaymentMethodQuery(get_called_class());
+    }
+
+    /**
+     * @return string
+     */
+    public function getPayUrl(): string
+    {
+        return '/pay/' . $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImageUrl(): string
+    {
+        return str_replace(' ', '', $this->name) . '.jpg';
     }
 }
